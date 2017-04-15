@@ -2,9 +2,13 @@
 
 A password cracker for RAR,ZIP and 7z files written in Python 3.
 
+## Installation (Linux)
+
+sudo make install
+
 ## Usage
 
-python3 pyrarcr.py [rar file]
+pyrarcr [rar file]
 
 ## Contribution and License Agreement
 
