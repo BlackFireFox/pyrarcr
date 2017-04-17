@@ -34,7 +34,7 @@ def rc(rf):
   for b in itertools.product(alphabet,repeat=a):
    k="".join(b)
    if rf[-4:]==".rar":
-    print("Trying:",k)
+    print("Trying:",k,end="\r")
     kf=os.popen("unrar t -y -p%s %s 2>&1|grep 'All OK'"%(k,rf))
     tryn+=1
     for rkf in kf.readlines():
@@ -46,7 +46,7 @@ def rc(rf):
       time.sleep(2)
       sys.exit(1)
    elif rf[-4:]==".zip" or rf[-3:]==".7z":
-    print("Trying:",k)
+    print("Trying:",k,end="\r")
     kf=os.popen("7za t -p%s %s 2>&1|grep 'Everything is Ok'"%(k,rf))
     tryn+=1
     for rkf in kf.readlines():
